@@ -9,7 +9,7 @@
 - `--expose` flag creates a service of type *ClusterIP*
 
 ### Service
-`kubectl expose <resource-type> <resource-name> --port=<port> --name <svc name>`
+`kubectl expose <resource-type> <resource-name> --port=<port> --name <svc name> --type=<service-type (i.e. NodePort)>`
 
 ### Deployment
 `kubectl create deployment <name> --namespace=<namespace> --image=<image> --replicas=<replicas>`
