@@ -16,3 +16,6 @@
 
 ### ConfigMap
 `kubectl create configmap <name> --from-literal=<key=value>`
+
+### Secrets
+`kubectl create secret generic <name> --from-literal=<key=value>`
