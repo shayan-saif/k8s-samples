@@ -13,3 +13,6 @@
 
 ### Deployment
 `kubectl create deployment <name> --namespace=<namespace> --image=<image> --replicas=<replicas>`
+
+### ConfigMap
+`kubectl create configmap <name> --from-literal=<key=value>`
