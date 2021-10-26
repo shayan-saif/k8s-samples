@@ -4,6 +4,9 @@
 - `kubectl ... --dry-run=client -o yaml` will output the yaml definition
 - `kubectl ... | grep -i <search-term>` to search output of a command
 
+## Explain
+- `kubectl explain <resource> --recursive | grep -i -A<lines> <query>` will explain the YAML structure
+
 ### Pod
 `kubectl run <name> --image=<image> --port=<port> --expose`
 - `--expose` flag creates a service of type *ClusterIP*
