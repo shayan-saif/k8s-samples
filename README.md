@@ -22,3 +22,7 @@
 
 ### Secrets
 `kubectl create secret generic <name> --from-literal=<key=value>`
+
+### Node Affinity
+- `kubectl describe node <node-name> | head` displays labels and annotations for given node
+- `kubectl label node <node-name> <key>=<value>` labels a node
