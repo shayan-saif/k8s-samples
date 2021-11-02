@@ -14,6 +14,9 @@
 ### Service
 `kubectl expose <resource-type> <resource-name> --port=<port> --name <svc name> --type=<service-type (i.e. NodePort)>`
 
+### Ingress
+`kubectl create ingres <ingress-name> --rule="<host/path=service:port>"`
+
 ### Deployment
 `kubectl create deployment <name> --namespace=<namespace> --image=<image> --replicas=<replicas>`
 
