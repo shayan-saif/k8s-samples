@@ -6,9 +6,11 @@ spec:
   podSelector:
     matchLabels:
       role: db
+  namespaceSelector:
+    matchLabels:
+      name: prod
   policyTypes:
   - Ingress
-  
   ingress:
   - from:
     - podSelector:
