@@ -6,9 +6,6 @@ spec:
   podSelector:
     matchLabels:
       role: db
-  namespaceSelector:
-    matchLabels:
-      name: prod
   policyTypes:
   - Ingress
   ingress:
@@ -16,6 +13,11 @@ spec:
     - podSelector:
         matchLabels:
           name: api-pod
+      namespaceSelector:
+        matchLabels:
+          name: prod
+    - ipBlock:
+        cidr: 192.168.5.10/32
     ports:
     - protocol: TCP
       port: 3306
