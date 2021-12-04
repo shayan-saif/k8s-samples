@@ -27,7 +27,7 @@
 `kubectl create ingress app-ingress --rule="app.com/*=app-svc:80"`
 
 ### Deployment
-`kubectl create deploy <name> -n=<namespace> --image=<image> --replicas=<replicas> -port=<port>`
+`kubectl create deploy <name> --image=<image> --replicas=<replicas> -port=<port>`
 `kubectl create deploy app-deploy --image=nginx:alpine --replicas=3 --port=80`
 
 ### ConfigMap
