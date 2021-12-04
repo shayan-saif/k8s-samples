@@ -28,6 +28,7 @@
 
 ### Deployment
 `kubectl create deploy <name> --image=<image> --replicas=<replicas> -port=<port>`
+#### Example
 `kubectl create deploy app-deploy --image=nginx:alpine --replicas=3 --port=80`
 
 ### ConfigMap
