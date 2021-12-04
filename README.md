@@ -1,19 +1,19 @@
 # k8s-samples
 
 ## Imperative commands
-- `kubectl ... --dry-run=client -o yaml` will mock a command execution and output the yaml definition
-- `kubectl ... | grep -i <search-term>` to search output of a command
+- `kubectl ... --dry-run=client -o yaml` will mock a command execution and output the yaml definition 
+- Which you can save with `... -o yaml > file.yaml`
+- `vim file.yaml` to tweak the file before `kubectl apply -f file.yaml`
 
-## Explain
-- `kubectl explain <resource> --recursive | less` will explain the YAML structure, type '/searchterm' to search for something (i.e. volumes)
+### Explain
+`kubectl explain <resource> --recursive | less` will explain the YAML structure, type '/searchterm' to search for something (i.e. volumes)
 #### Example
-- `kubectl explain pods --recursive | less`
+`kubectl explain pods --recursive | less`
 
 ### Pod
-`kubectl run <name> --image=<image> --port=<port> --expose`
-- `--expose` flag creates a service of type *ClusterIP*
+`kubectl run <name> --image=<image> --port=<port>`
 #### Example
-- `kubectl run nginx-pod --image=nginx:alpine --port=80`
+`kubectl run nginx-pod --image=nginx:alpine --port=80`
 
 ### Service
 `kubectl expose <resource-type> <resource-name> --name <svc name> --type=<service-type (i.e. NodePort)>  --port=<port> --target-port`
@@ -37,11 +37,11 @@
 
 ### Secrets
 `kubectl create secret generic <name> --from-literal=<key=value>`
+#### Example
 `kubectl create secret generic db-secret --from-literal=POSTGRES_PASSWORD=postgres`
 
 ### Node Affinity
-- `kubectl describe node <node-name> | head` displays labels and annotations for given node
-- `kubectl label node <node-name> <key>=<value>` labels a node
+`kubectl label node <node-name> <key>=<value>` labels a node (swap 'node' with any object to easily label)
 
 ### Node/Pod level metrics
-- `kubectl top node` or `kubectl top pod` to see resource consumption
+`kubectl top node` or `kubectl top pod` to see resource consumption
