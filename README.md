@@ -3,7 +3,7 @@
 ## Imperative commands
 - `kubectl ... --dry-run=client -o yaml` will mock a command execution and output the yaml definition 
 - Which you can save with `... -o yaml > file.yaml`
-- `vim file.yaml` to tweak the file before `kubectl apply -f file.yaml`
+- `vim file.yaml` to tweak the file before `kubectl create -f file.yaml`
 
 ### Explain
 `kubectl explain <resource> --recursive | less` will explain the YAML structure, type '/searchterm' to search for something (i.e. volumes)
